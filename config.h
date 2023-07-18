@@ -229,10 +229,10 @@ static const Key keys[] = {
 	{ MODKEY,			XK_period,	spawn,		{.v = (const char*[]){ "mpc", "next", NULL } } },
 	{ MODKEY|ShiftMask,		XK_period,	spawn,		{.v = (const char*[]){ "mpc", "repeat", NULL } } },
 
-	{ MODKEY,			XK_Left,	focusmon,	{.i = -1 } },
-	{ MODKEY|ShiftMask,		XK_Left,	tagmon,		{.i = -1 } },
-	{ MODKEY,			XK_Right,	focusmon,	{.i = +1 } },
-	{ MODKEY|ShiftMask,		XK_Right,	tagmon,		{.i = +1 } },
+	{ MODKEY,			XK_Left,	focusmon,	{.i = +1 } },
+	{ MODKEY|ShiftMask,		XK_Left,	tagmon,		{.i = +1 } },
+	{ MODKEY,			XK_Right,	focusmon,	{.i = -1 } },
+	{ MODKEY|ShiftMask,		XK_Right,	tagmon,		{.i = -1 } },
 
 	{ MODKEY,			XK_Page_Up,	shiftview,	{ .i = -1 } },
 	{ MODKEY|ShiftMask,		XK_Page_Up,	shifttag,	{ .i = -1 } },
@@ -336,4 +336,3 @@ static const Button buttons[] = {
 	{ ClkTagBar,		0,		Button5,	shiftview,	{.i = 1} },
 	{ ClkRootWin,		0,		Button2,	togglebar,	{0} },
 };
-
