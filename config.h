@@ -234,6 +234,11 @@ static const Key keys[] = {
 	{ MODKEY,			XK_Right,	focusmon,	{.i = -1 } },
 	{ MODKEY|ShiftMask,		XK_Right,	tagmon,		{.i = -1 } },
 
+	{ MODKEY|ControlMask,			XK_k,	focusmon,	{.i = +1 } },
+	{ MODKEY|ShiftMask|ControlMask,		XK_k,	tagmon,		{.i = +1 } },
+	{ MODKEY|ControlMask,			XK_j,	focusmon,	{.i = -1 } },
+	{ MODKEY|ShiftMask|ControlMask,		XK_j,	tagmon,		{.i = -1 } },
+
 	{ MODKEY,			XK_Page_Up,	shiftview,	{ .i = -1 } },
 	{ MODKEY|ShiftMask,		XK_Page_Up,	shifttag,	{ .i = -1 } },
 	{ MODKEY,			XK_Page_Down,	shiftview,	{ .i = +1 } },
