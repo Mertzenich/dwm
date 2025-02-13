@@ -265,6 +265,8 @@ static const Key keys[] = {
 	{ MODKEY,			XK_F12,        spawn,                  SHCMD("remaps") },
 	{ MODKEY,			XK_space,      zoom,                   {0} },
 	{ MODKEY|ShiftMask,		XK_space,      togglefloating,         {0} },
+	{ MODKEY|ControlMask,	XK_space,      togglefloating,         {0} },
+	{ MODKEY|ControlMask,	XK_space,      togglealwaysontop,         {0} },
 
 	{ 0,				XK_Print,      spawn,                  SHCMD("maim pic-full-$(date '+%y%m%d-%H%M-%S').png") },
 	{ ShiftMask,			XK_Print,      spawn,                  {.v = (const char*[]){ "maimpick", NULL } } },
