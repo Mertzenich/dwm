@@ -51,9 +51,10 @@ static const Rule rules[] = {
 	*/
 	/* class    instance      title       	 tags mask    isfloating   isterminal  noswallow  monitor */
 	{ "Gimp",         NULL,        NULL,       	        1 << 8,       0,           0,         0,        -1 },
+	{ "discord",         NULL,        NULL,       	        1 << 1,       0,           0,         0,         2 },
+	{ "TelegramDesktop",         NULL,        NULL,       	        1 << 0,       0,           0,         0,         2 },
 	{ TERMCLASS,      NULL,        NULL,       	        0,            0,           1,         0,        -1 },
 	{ NULL,           NULL,        "Event Tester",       0,            0,           0,         1,        -1 },
-	{ NULL,           NULL,        "Minecraft 24w18a",   0,            1,           0,         1,        -1 },
 	{ "net-runelite-launcher-Launcher",           NULL,        NULL,	                0,            1,           0,         1,        -1 },
 	{ "net-runelite-client-RuneLite",           NULL,        "RuneLite Launcher",	                0,            1,           0,         1,        -1 },
 	{ TERMCLASS,      "floatterm", NULL,            0,            1,           1,         0,        -1 },
@@ -347,3 +348,4 @@ static const Button buttons[] = {
 	{ ClkTagBar,		0,		     Button5,	     shiftview,      {.i = 1} },
 	{ ClkRootWin,		0,		     Button2,	     togglebar,      {0} },
 };
+
