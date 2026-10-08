@@ -33,8 +33,21 @@ typedef struct {
 	const char *name;
 	const void *cmd;
 } Sp;
-const char *spcmd1[] = {TERMINAL, "-n", "spterm", "-g", "120x34", NULL };
-const char *spcmd2[] = {TERMINAL, "-n", "spcalc", "-f", "monospace:size=16", "-g", "50x20", "-e", "bc", "-lq", NULL };
+const char *spcmd1[] = {
+    TERMINAL, "--class", "Alacritty,spterm",
+    "-o", "window.dimensions.columns=120",
+    "-o", "window.dimensions.lines=34",
+    NULL
+};
+const char *spcmd2[] = {
+    TERMINAL, "--class", "Alacritty,spcalc",
+    "-o", "font.normal.family=\"monospace\"",
+    "-o", "font.size=16",
+    "-o", "window.dimensions.columns=50",
+    "-o", "window.dimensions.lines=20",
+    "-e", "bc", "-lq",
+    NULL
+};
 static Sp scratchpads[] = {
 	/* name          cmd  */
 	{"spterm",      spcmd1},
